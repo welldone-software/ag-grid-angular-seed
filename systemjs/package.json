@@ -8,7 +8,8 @@
     "tsc:w": "tsc -p tsconfig.json -w",
     "start": "concurrently \"npm run tsc:w\" \"npm run lite\" ",
     "build:aot": "gulp ngc && gulp aot-bundle",
-    "lite:aot": "lite-server -c aot/bs-config.json"
+    "lite:aot": "lite-server -c aot/bs-config.json",
+    "build": "npm run build:aot && npm run lite:aot"
   },
   "author": "",
   "license": "ISC",
