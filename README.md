@@ -10,5 +10,5 @@
 # Then run the following to build and run the seed projects:
 
 * npm install
-* npm start     <- development build
-* npm build     <- production/aot build
+* npm start         <- development build
+* npm run build     <- production/aot build
