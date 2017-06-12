@@ -1,5 +1,4 @@
 import {Component} from "@angular/core";
-import {GridOptions} from "ag-grid";
 import {RedComponentComponent} from "../red-component/red-component.component";
 
 @Component({
@@ -7,29 +6,25 @@ import {RedComponentComponent} from "../red-component/red-component.component";
     templateUrl: './my-grid-application.component.html'
 })
 export class MyGridApplicationComponent {
-    private gridOptions: GridOptions;
+    columnDefs;
+    rowData;
 
     constructor() {
-        this.gridOptions = {};
-        this.gridOptions.columnDefs = [
-            {
-                headerName: "ID",
-                field: "id",
-                width: 100
-            },
-            {
-                headerName: "Value",
-                field: "value",
-                cellRendererFramework: RedComponentComponent,
-                width: 100
-            },
-
+        this.columnDefs = [
+            {headerName: "Make", field: "make"},
+            {headerName: "Model", field: "model", cellRendererFramework: RedComponentComponent},
+            {headerName: "Price", field: "price"}
         ];
-        this.gridOptions.rowData = [
-            {id: 5, value: 10},
-            {id: 10, value: 15},
-            {id: 15, value: 20}
+
+        this.rowData = [
+            {make: "Toyota", model: "Celica", price: 35000},
+            {make: "Ford", model: "Mondeo", price: 32000},
+            {make: "Porsche", model: "Boxter", price: 72000}
         ]
+    }
+
+    onGridReady(params) {
+        params.api.sizeColumnsToFit();
     }
 }
 

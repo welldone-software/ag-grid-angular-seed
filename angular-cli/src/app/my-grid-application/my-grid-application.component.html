@@ -1,5 +1,7 @@
-<div style="width: 200px;">
-    <ag-grid-angular #agGrid style="width: 100%; height: 200px;" class="ag-fresh"
-                 [gridOptions]="gridOptions">
-    </ag-grid-angular>
-</div>
+<h1>Simple ag-Grid Angular Example</h1>
+<ag-grid-angular style="width: 500px; height: 115px;"
+                 class="ag-fresh"
+                 [rowData]="rowData"
+                 [columnDefs]="columnDefs"
+                 (gridReady)="onGridReady($event)">
+</ag-grid-angular>
