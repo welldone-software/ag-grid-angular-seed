@@ -30,5 +30,9 @@ export class AppComponent {
             {make: "Porsche", model: "Boxter", price: 72000}
         ];
     }
+
+    selectAllRows() {
+        this.gridOptions.api.selectAll();
+    }
 }
 

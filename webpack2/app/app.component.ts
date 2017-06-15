@@ -7,9 +7,9 @@ import {GridOptions} from "ag-grid/main";
     templateUrl: 'app.component.html'
 })
 export class AppComponent {
-    private gridOptions:GridOptions;
-    public rowData:any[];
-    private columnDefs:any[];
+    gridOptions: GridOptions;
+    rowData: any[];
+    columnDefs: any[];
 
     constructor() {
         // we pass an empty gridOptions in, so we can grab the api out
@@ -28,6 +28,10 @@ export class AppComponent {
             {make: "Ford", model: "Mondeo", price: 32000},
             {make: "Porsche", model: "Boxter", price: 72000}
         ];
+    }
+
+    selectAllRows() {
+        this.gridOptions.api.selectAll();
     }
 }
 

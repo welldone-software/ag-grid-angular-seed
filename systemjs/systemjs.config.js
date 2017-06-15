@@ -26,6 +26,9 @@
                 },
                 'ag-grid': {
                     main: 'main.js'
+                },
+                'ag-grid-angular': {
+                    main: 'main.js'
                 }
             }
         }

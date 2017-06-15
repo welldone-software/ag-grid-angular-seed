@@ -1,15 +1,20 @@
 import {Component} from "@angular/core";
 import {RedComponentComponent} from "../red-component/red-component.component";
 
+import {GridOptions} from "ag-grid/main";
+
 @Component({
     selector: 'app-my-grid-application',
     templateUrl: './my-grid-application.component.html'
 })
 export class MyGridApplicationComponent {
-    columnDefs;
-    rowData;
+    gridOptions: GridOptions;
+    columnDefs: any[]
+    rowData: any[];
 
     constructor() {
+        this.gridOptions = <GridOptions>{};
+
         this.columnDefs = [
             {headerName: "Make", field: "make"},
             {headerName: "Model", field: "model", cellRendererFramework: RedComponentComponent},
@@ -25,6 +30,10 @@ export class MyGridApplicationComponent {
 
     onGridReady(params) {
         params.api.sizeColumnsToFit();
+    }
+
+    selectAllRows() {
+        this.gridOptions.api.selectAll();
     }
 }
 
