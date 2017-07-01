@@ -1,6 +1,6 @@
-import { browser, element, by } from 'protractor';
+import { browser, by, element } from 'protractor';
 
-export class AgGridCliPage {
+export class AgGridPage {
   navigateTo() {
     return browser.get('/');
   }

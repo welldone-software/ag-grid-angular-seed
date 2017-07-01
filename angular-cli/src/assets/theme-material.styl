@@ -1,0 +1,159 @@
+ag-style = "material"
+ag-root-font-family = Roboto
+ag-root-font-size = 16px
+
+ag-scrollbar-background = inherit
+ag-scrollbar-thumb = inherit
+
+ag-border-1 = none
+
+ag-border-color-1 = #000
+ag-border-color-2 = #808080
+
+ag-background-1 = #fff
+
+ag-foreground-1 = #000
+
+ag-header-foreground-1 = #666
+
+ag-separator-color = #d3d3d3
+
+ag-cell-focused-border = 1px solid lightgrey
+ag-cell-no-focus-border-top = 1px solid transparent
+ag-cell-no-focus-border-bottom = 1px solid transparent
+ag-cell-ltr-no-focus-border-right = 1px solid transparent
+ag-cell-ltr-no-focus-border-left = 1px solid transparent
+ag-cell-rtl-no-focus-border-right = 1px solid transparent
+ag-cell-rtl-no-focus-border-left = 1px solid transparent
+
+ag-cell-highlight-border = 1px solid darkgreen
+
+ag-cell-padding = 2px
+
+ag-row-selected-background-color = #F5F5F5
+ag-row-selected-background-color = #F5F5F5
+ag-row-odd-background-color = rgba(0, 0, 0, .03)
+ag-row-even-background-color = white
+ag-row-floating-background-color = #f0f0f0
+ag-row-stub-background-color = #f0f0f0
+
+ag-value-change-delta-up-color = darkgreen
+ag-value-change-delta-down-color = darkred
+ag-value-change-value-highlight-background-color = #cec
+
+ag-range-selected-color-1 = rgba(120, 120, 120, 0.4)
+ag-range-selected-color-2 = rgba(80, 80, 80, 0.4)
+ag-range-selected-color-3 = rgba(40, 40, 40, 0.4)
+ag-range-selected-color-4 = rgba(0, 0, 0, 0.4)
+
+ag-header-background-1 = none
+ag-header-select-padding = 5px 0px 0px 15px
+
+ag-button-background-1 = none
+ag-button-foreground-1 = #000
+ag-button-border-1 = #808080
+
+ag-header-font-weight = 500
+
+ag-tab-border = 1px solid transparent
+ag-tab-background = #f6f6f6
+ag-tab-selected-background = #fff
+ag-tab-padding = 6px 16px 6px 16px
+
+ag-menu-option-active-color = #BDE2E5
+
+ag-select-background = white
+ag-select-foreground = #222
+
+ag-menu-option-padding = 10px 6px 10px 6px
+ag-menu-option-shortcut-padding = 10px 6px 10px 6px
+
+@import "theme-common"
+
+.ag-dnd-ghost
+  background transparent
+  border none
+  z-index 300
+  width: 50px
+  & > *
+    display none !important
+
+.ag-material
+  border 1px solid rgba(0, 0, 0, .1)
+  -webkit-font-smoothing: antialiased;
+
+  .ag-menu
+    z-index 200
+    padding 10px
+    background white
+    box-shadow 0 0 15px 0 rgba(0, 0, 0, .15)
+    border 1px solid rgba(0, 0, 0, .15)
+
+    .ag-filter-select, .ag-filter-filter
+      height 32px
+      font-size 14px
+      background white
+      margin 0
+      margin-bottom 10px
+      width: 100%
+      padding 0 3px
+      border 1px solid rgba(0, 0, 0, .15)
+
+    .ag-filter-filter
+      margin-bottom 0
+      width: calc(100% - 8px)
+
+    .ag-filter-apply-panel
+      border-top 0 solid #d3d3d3
+      padding 10px 0 0 0
+      display flex
+      justify-content space-between
+
+      button
+        height 28px
+        font-size 14px
+
+  .ag-row-hover
+    background-color rgba(0, 0, 0, .05) !important
+  .ag-cell-not-inline-editing
+    padding 5px
+  .ag-header-cell-menu-button:hover
+    border 1px solid grey
+
+  .ag-header-cell-label
+    text-align left
+
+  .ag-header
+    box-shadow 0 2px 15px 0 rgba(0, 0, 0, .15)
+    z-index 100
+    .ag-header-cell
+      border-right 1px solid rgba(0, 0, 0, .05)
+      box-shadow inset 0 0 0 0 transparent
+
+      .ag-header-icon.ag-sort-ascending-icon, .ag-header-icon.ag-sort-descending-icon
+        display none !important
+
+      .ag-cell-label-container
+        transition box-shadow .3s cubic-bezier(.175, .885, .32, 1.275)
+        padding 5px
+
+        .ag-header-cell-menu-button
+          border-color transparent
+
+      .ag-header-cell-sorted-asc
+        box-shadow inset 0 3px 0 0 rgba(0, 0, 0, .6)
+
+      .ag-header-cell-sorted-desc
+        box-shadow inset 0 -3px 0 0 rgba(0, 0, 0, .6)
+
+  .ag-cell
+    display flex
+    align-items center
+    &.ag-cell-focus
+      outline none
+      background-color white
+      z-index 10
+      box-shadow 0 0 15px 0 rgba(0, 0, 0, .15)
+// we want checkbox to have more spacing to the right and left
+  .ag-selection-checkbox
+    padding 5px

@@ -1,14 +1,14 @@
-import { AgGridCliPage } from './app.po';
+import { AgGridPage } from './app.po';
 
-describe('ag-grid-cli App', () => {
-  let page: AgGridCliPage;
+describe('ag-grid App', () => {
+  let page: AgGridPage;
 
   beforeEach(() => {
-    page = new AgGridCliPage();
+    page = new AgGridPage();
   });
 
-  it('should display message saying app works', () => {
+  it('should display welcome message', () => {
     page.navigateTo();
-    expect(page.getParagraphText()).toEqual('app works!');
+    expect(page.getParagraphText()).toEqual('Welcome to app!!');
   });
 });
